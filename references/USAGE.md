@@ -7,6 +7,7 @@
 - 技术文档 Markdown 翻译
 - 含代码块、行内代码、LaTeX 公式、少量 HTML 标签的文档
 - 需要术语统一、格式保护、差异对照的场景
+- 跨境电商与出海贸易内容翻译（商品标题、卖点、详情、物流与售后条款）
 
 ## 当前能力边界
 
@@ -111,6 +112,34 @@ Trados 导出分段规则（增强版）：
 - `trados/segment_map.csv`
 - `trados/removed_segments.csv` (仅增量模式)
 - `trados/qa_flags.csv`
+- `references/glossary.active.json` (本轮方向术语映射)
+
+## 跨境电商模式（新增）
+
+当翻译对象属于跨境电商/出海贸易内容时，建议切换到电商术语与合规清单。
+
+1. 生成电商方向术语映射（EN -> ZH）：
+
+```powershell
+python scripts/prepare_glossary.py --terminology references/terminology.ecommerce.json --source-lang en-US --target-lang zh-CN --out references/glossary.active.json
+```
+
+2. 生成电商方向术语映射（ZH -> EN）：
+
+```powershell
+python scripts/prepare_glossary.py --terminology references/terminology.ecommerce.json --source-lang zh-CN --target-lang en-US --out references/glossary.active.json
+```
+
+3. Trados 导出时启用术语一致性 QA，并建议启用 warning 门槛：
+
+```powershell
+python scripts/trados_export.py Draft_v1.md Final_Output.md --source-lang en-US --target-lang zh-CN --glossary-json references/glossary.active.json --qa-csv-out trados/qa_flags.csv --fail-on-severity warning
+```
+
+4. 人工复核 `references/compliance.ecommerce.md`，重点核查：
+- 绝对化宣称、疗效承诺、保证性承诺
+- 平台禁售/限售与侵权风险词
+- 清关、税费、物流时效、退换货条款是否真实可执行
 
 ## 故障排查
 

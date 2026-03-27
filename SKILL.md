@@ -31,10 +31,20 @@ requires: []
 - **负面约束**: `references/GOTCHAS.md` (严禁触犯)。
 - **最小使用说明**: `references/USAGE.md`。
 
+## 行业模式（新增：跨境电商/出海贸易）
+
+- 当任务是跨境电商商品页、营销文案、物流与售后条款时，优先使用：
+  - `references/terminology.ecommerce.json`
+  - `references/compliance.ecommerce.md`
+- 术语准备命令（电商模式）：
+  - 英中：`python scripts/prepare_glossary.py --terminology references/terminology.ecommerce.json --source-lang en-US --target-lang zh-CN --out references/glossary.active.json`
+  - 中英：`python scripts/prepare_glossary.py --terminology references/terminology.ecommerce.json --source-lang zh-CN --target-lang en-US --out references/glossary.active.json`
+- 阶段三（审校）除 `style_guide.md` 外，还需并行检查 `compliance.ecommerce.md` 的高风险用语与承诺性表达。
+
 # 多智能体协作工作流
 
 ## 阶段一：预处理与切分
-1.  **代码保护**: 调用 `scripts/placeholder.py`，将所有代码块、公式替换为 `{{PH_XXX}}`。
+1.  **代码保护**: 调用 `scripts/placeholder.py`，将所有代码块、公式替换为占位符（如 `{{PH-ID}}`）。
 2.  **智能切分**: 调用 `scripts/splitter.py`。
     - 若文本 > 5000 字符，按 Markdown 二级标题 (`##`) 切分为多个子任务块。
     - 若文本 < 5000 字符，保持单任务。
@@ -121,6 +131,7 @@ requires: []
 - 中英：`python scripts/prepare_glossary.py --source-lang zh-CN --target-lang en-US`
 - 生成结果默认写入 `references/glossary.active.json`，供本轮提示词/流程直接使用。
 - 在 Trados 导出 QA 阶段，调用 `scripts/trados_export.py` 时应传入 `--glossary-json references/glossary.active.json`，启用 `term_inconsistency` 自动检查。
+- 对跨境电商/出海贸易任务，推荐将 `--fail-on-severity warning` 作为发布前门槛，避免高风险语句直接上线。
 
 ## 执行进度播报协议（OpenClaw）
 
