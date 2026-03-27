@@ -36,9 +36,14 @@ requires: []
 - 当任务是跨境电商商品页、营销文案、物流与售后条款时，优先使用：
   - `references/terminology.ecommerce.json`
   - `references/compliance.ecommerce.md`
+- 支持自动切换术语域：`scripts/prepare_glossary.py --domain auto --input-file <source_file>`
+  - 自动检测为电商域时使用 `references/terminology.ecommerce.json`
+  - 否则回退 `references/terminology.json`
 - 术语准备命令（电商模式）：
   - 英中：`python scripts/prepare_glossary.py --terminology references/terminology.ecommerce.json --source-lang en-US --target-lang zh-CN --out references/glossary.active.json`
   - 中英：`python scripts/prepare_glossary.py --terminology references/terminology.ecommerce.json --source-lang zh-CN --target-lang en-US --out references/glossary.active.json`
+- 推荐自动路由命令：
+  - `python scripts/prepare_glossary.py --domain auto --input-file input.md --source-lang en-US --target-lang zh-CN --out references/glossary.active.json`
 - 阶段三（审校）除 `style_guide.md` 外，还需并行检查 `compliance.ecommerce.md` 的高风险用语与承诺性表达。
 
 # 多智能体协作工作流

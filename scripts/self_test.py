@@ -245,6 +245,39 @@ def main() -> int:
         gr = json.loads(glossary_reverse.read_text(encoding="utf-8"))
         assert_ok(gr["map"].get("端点") == "Endpoint", "reverse glossary direction invalid")
 
+        # Auto domain routing scenario: ecommerce-like input should select ecommerce terminology.
+        auto_input = tmp / "auto_ecom.md"
+        auto_input.write_text(
+            "Amazon listing with SKU variants, shipping fee, return policy and storefront updates.\n",
+            encoding="utf-8",
+        )
+        glossary_auto = tmp / "glossary.auto.json"
+        code, out, err = run(
+            [
+                sys.executable,
+                str(ROOT / "scripts" / "prepare_glossary.py"),
+                "--domain",
+                "auto",
+                "--input-file",
+                str(auto_input),
+                "--default-terminology",
+                str(terminology),
+                "--ecommerce-terminology",
+                str(ROOT / "references" / "terminology.ecommerce.json"),
+                "--source-lang",
+                "en-US",
+                "--target-lang",
+                "zh-CN",
+                "--out",
+                str(glossary_auto),
+            ]
+        )
+        assert_ok(code == 0, f"prepare_glossary.py auto domain failed:\nstdout:\n{out}\nstderr:\n{err}")
+        ga_summary = parse_json_line(out)
+        assert_ok(ga_summary["selected_domain"] == "ecommerce", "auto domain routing should select ecommerce")
+        ga = json.loads(glossary_auto.read_text(encoding="utf-8"))
+        assert_ok(ga["map"].get("SKU") == "SKU", "auto domain glossary should contain ecommerce terms")
+
         xliff_path = tmp / "trados" / "segments.xliff"
         tmx_path = tmp / "trados" / "memory.tmx"
         csv_path = tmp / "trados" / "segment_map.csv"

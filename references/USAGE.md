@@ -118,6 +118,17 @@ Trados 导出分段规则（增强版）：
 
 当翻译对象属于跨境电商/出海贸易内容时，建议切换到电商术语与合规清单。
 
+自动切换（推荐）：
+
+```powershell
+python scripts/prepare_glossary.py --domain auto --input-file input.md --source-lang en-US --target-lang zh-CN --out references/glossary.active.json
+```
+
+说明：
+- 命中电商关键词时自动选择 `references/terminology.ecommerce.json`
+- 未命中时自动回退 `references/terminology.json`
+- 命令输出 JSON 中会返回 `selected_domain` 供你确认路由结果
+
 1. 生成电商方向术语映射（EN -> ZH）：
 
 ```powershell
