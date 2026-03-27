@@ -1,0 +1,33 @@
+{
+  "source_language": "en-US",
+  "target_language": "zh-CN",
+  "tone": "professional",
+  "output_suffix": "_translated",
+  "review_threshold": 10,
+  "max_retries": 3,
+  "preserve_code": true,
+  "chunk_size": 5000,
+  "model_routes": {
+    "gemini": {
+      "provider": "openai_compatible",
+      "base_url": "https://your-openai-compatible-endpoint/v1",
+      "api_key": "sk-your-openai-compatible-key",
+      "model_name": "gemini-3.1-pro-preview"
+    },
+    "claude": {
+      "provider": "openai_compatible",
+      "base_url": "https://your-openai-compatible-endpoint/v1",
+      "api_key": "sk-your-openai-compatible-key",
+      "model_name": "claude-sonnet-4-6"
+    },
+    "gpt": {
+      "provider": "openai",
+      "api_key": "sk-your-openai-key",
+      "model_name": "gpt-5.3-codex"
+    }
+  },
+  "notes": {
+    "model_routes_are_reference_only": true,
+    "execution_bridge_required": "This skill currently documents routing preferences but does not automatically invoke external model endpoints from the local helper scripts."
+  }
+}

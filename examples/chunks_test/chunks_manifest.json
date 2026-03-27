@@ -1,0 +1,10 @@
+{
+  "source_file": "C:\\Users\\Administrator\\.openclaw\\skills\\super-translator-team-pro\\examples\\good_example.md",
+  "chunk_size": 800,
+  "chunk_count": 3,
+  "chunks": [
+    "C:\\Users\\Administrator\\.openclaw\\skills\\super-translator-team-pro\\examples\\chunks_test\\chunk_001.md",
+    "C:\\Users\\Administrator\\.openclaw\\skills\\super-translator-team-pro\\examples\\chunks_test\\chunk_002.md",
+    "C:\\Users\\Administrator\\.openclaw\\skills\\super-translator-team-pro\\examples\\chunks_test\\chunk_003.md"
+  ]
+}

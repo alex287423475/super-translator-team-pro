@@ -1,0 +1,454 @@
+{
+  "meta": {
+    "description": "通用技术文档术语表",
+    "version": "1.0",
+    "last_updated": "2026-03-27"
+  },
+  "terms": [
+    {
+      "source": "API",
+      "target": "API",
+      "note": "保留英文缩写，不要翻译为'应用程序接口'"
+    },
+    {
+      "source": "Endpoint",
+      "target": "端点",
+      "note": "指API接口地址"
+    },
+    {
+      "source": "Request",
+      "target": "请求",
+      "note": "HTTP请求"
+    },
+    {
+      "source": "Response",
+      "target": "响应",
+      "note": "服务器返回的数据"
+    },
+    {
+      "source": "Payload",
+      "target": "负载",
+      "note": "传输的数据主体"
+    },
+    {
+      "source": "Instance",
+      "target": "实例",
+      "note": "编程中的对象实例或服务器实例"
+    },
+    {
+      "source": "Render",
+      "target": "渲染",
+      "note": "前端页面渲染或数据生成"
+    },
+    {
+      "source": "Deploy",
+      "target": "部署",
+      "note": "代码上线"
+    },
+    {
+      "source": "Build",
+      "target": "构建",
+      "note": "编译打包过程"
+    },
+    {
+      "source": "Repository",
+      "target": "仓库",
+      "note": "代码仓库"
+    },
+    {
+      "source": "Branch",
+      "target": "分支",
+      "note": "Git分支"
+    },
+    {
+      "source": "Commit",
+      "target": "提交",
+      "note": "Git提交"
+    },
+    {
+      "source": "Pull Request",
+      "target": "拉取请求",
+      "note": "也可简称为 PR"
+    },
+    {
+      "source": "Merge",
+      "target": "合并",
+      "note": "代码合并"
+    },
+    {
+      "source": "Token",
+      "target": "令牌",
+      "note": "认证凭证"
+    },
+    {
+      "source": "Authentication",
+      "target": "认证",
+      "note": "身份验证"
+    },
+    {
+      "source": "Authorization",
+      "target": "授权",
+      "note": "权限授予"
+    },
+    {
+      "source": "Environment Variable",
+      "target": "环境变量",
+      "note": "系统配置参数"
+    },
+    {
+      "source": "Dependency",
+      "target": "依赖",
+      "note": "项目依赖包"
+    },
+    {
+      "source": "Framework",
+      "target": "框架",
+      "note": "开发框架"
+    },
+    {
+      "source": "Library",
+      "target": "库",
+      "note": "代码库"
+    },
+    {
+      "source": "Module",
+      "target": "模块",
+      "note": "功能模块"
+    },
+    {
+      "source": "Component",
+      "target": "组件",
+      "note": "UI组件或功能组件"
+    },
+    {
+      "source": "Configuration",
+      "target": "配置",
+      "note": "系统设置"
+    },
+    {
+      "source": "Cache",
+      "target": "缓存",
+      "note": "临时存储"
+    },
+    {
+      "source": "Database",
+      "target": "数据库",
+      "note": "数据存储"
+    },
+    {
+      "source": "Query",
+      "target": "查询",
+      "note": "数据库查询或URL参数"
+    },
+    {
+      "source": "Schema",
+      "target": "模式",
+      "note": "数据结构定义"
+    },
+    {
+      "source": "Validation",
+      "target": "校验",
+      "note": "数据验证"
+    },
+    {
+      "source": "Error",
+      "target": "错误",
+      "note": "系统报错"
+    },
+    {
+      "source": "Warning",
+      "target": "警告",
+      "note": "非致命提示"
+    },
+    {
+      "source": "Debug",
+      "target": "调试",
+      "note": "排查问题"
+    },
+    {
+      "source": "Log",
+      "target": "日志",
+      "note": "运行记录"
+    },
+    {
+      "source": "Timeout",
+      "target": "超时",
+      "note": "操作时间超出限制"
+    },
+    {
+      "source": "Retry",
+      "target": "重试",
+      "note": "重新尝试操作"
+    },
+    {
+      "source": "Fallback",
+      "target": "降级",
+      "note": "备用方案或回退机制"
+    },
+    {
+      "source": "Middleware",
+      "target": "中间件",
+      "note": "介于系统之间的软件"
+    },
+    {
+      "source": "Pipeline",
+      "target": "流水线",
+      "note": "CI/CD流程"
+    },
+    {
+      "source": "Artifact",
+      "target": "制品",
+      "note": "构建产物"
+    },
+    {
+      "source": "Release",
+      "target": "发布",
+      "note": "版本发布"
+    },
+    {
+      "source": "Version",
+      "target": "版本",
+      "note": "软件版本号"
+    },
+    {
+      "source": "SaaS",
+      "target": "SaaS",
+      "note": "保留英文缩写"
+    },
+    {
+      "source": "PaaS",
+      "target": "PaaS",
+      "note": "保留英文缩写"
+    },
+    {
+      "source": "IaaS",
+      "target": "IaaS",
+      "note": "保留英文缩写"
+    },
+    {
+      "source": "SDK",
+      "target": "SDK",
+      "note": "保留英文缩写"
+    },
+    {
+      "source": "CLI",
+      "target": "CLI",
+      "note": "保留英文缩写，指命令行工具"
+    },
+    {
+      "source": "GUI",
+      "target": "GUI",
+      "note": "保留英文缩写，指图形界面"
+    },
+    {
+      "source": "UI",
+      "target": "UI",
+      "note": "保留英文缩写"
+    },
+    {
+      "source": "UX",
+      "target": "UX",
+      "note": "保留英文缩写"
+    },
+    {
+      "source": "Backend",
+      "target": "后端",
+      "note": "服务器端"
+    },
+    {
+      "source": "Frontend",
+      "target": "前端",
+      "note": "客户端界面"
+    },
+    {
+      "source": "Fullstack",
+      "target": "全栈",
+      "note": "前后端通吃"
+    },
+    {
+      "source": "Serverless",
+      "target": "无服务器",
+      "note": "一种云架构模式"
+    },
+    {
+      "source": "Microservice",
+      "target": "微服务",
+      "note": "架构风格"
+    },
+    {
+      "source": "Monolith",
+      "target": "单体应用",
+      "note": "传统架构"
+    },
+    {
+      "source": "Scalability",
+      "target": "可扩展性",
+      "note": "系统扩容能力"
+    },
+    {
+      "source": "Latency",
+      "target": "延迟",
+      "note": "网络传输耗时"
+    },
+    {
+      "source": "Throughput",
+      "target": "吞吐量",
+      "note": "系统处理能力"
+    },
+    {
+      "source": "Bandwidth",
+      "target": "带宽",
+      "note": "网络传输能力"
+    },
+    {
+      "source": "Encryption",
+      "target": "加密",
+      "note": "数据安全"
+    },
+    {
+      "source": "Decryption",
+      "target": "解密",
+      "note": "数据还原"
+    },
+    {
+      "source": "Hash",
+      "target": "哈希",
+      "note": "散列算法"
+    },
+    {
+      "source": "Salt",
+      "target": "盐",
+      "note": "加密辅助数据"
+    },
+    {
+      "source": "Session",
+      "target": "会话",
+      "note": "用户交互过程"
+    },
+    {
+      "source": "Cookie",
+      "target": "Cookie",
+      "note": "保留英文，浏览器存储"
+    },
+    {
+      "source": "Header",
+      "target": "请求头",
+      "note": "HTTP头部信息"
+    },
+    {
+      "source": "Body",
+      "target": "请求体",
+      "note": "HTTP主体内容"
+    },
+    {
+      "source": "Status Code",
+      "target": "状态码",
+      "note": "HTTP响应状态"
+    },
+    {
+      "source": "Redirect",
+      "target": "重定向",
+      "note": "页面跳转"
+    },
+    {
+      "source": "Proxy",
+      "target": "代理",
+      "note": "中间转发服务"
+    },
+    {
+      "source": "Gateway",
+      "target": "网关",
+      "note": "服务入口"
+    },
+    {
+      "source": "Load Balancer",
+      "target": "负载均衡器",
+      "note": "流量分发"
+    },
+    {
+      "source": "Container",
+      "target": "容器",
+      "note": "Docker等容器技术"
+    },
+    {
+      "source": "Image",
+      "target": "镜像",
+      "note": "容器镜像"
+    },
+    {
+      "source": "Orchestration",
+      "target": "编排",
+      "note": "K8s等资源管理"
+    },
+    {
+      "source": "Namespace",
+      "target": "命名空间",
+      "note": "资源隔离"
+    },
+    {
+      "source": "Pod",
+      "target": "Pod",
+      "note": "K8s最小单元，保留英文"
+    },
+    {
+      "source": "Service",
+      "target": "服务",
+      "note": "K8s服务或微服务"
+    },
+    {
+      "source": "Ingress",
+      "target": "入口",
+      "note": "K8s流量入口"
+    },
+    {
+      "source": "Egress",
+      "target": "出口",
+      "note": "流量出口"
+    },
+    {
+      "source": "Volume",
+      "target": "存储卷",
+      "note": "持久化存储"
+    },
+    {
+      "source": "ConfigMap",
+      "target": "配置映射",
+      "note": "K8s配置管理"
+    },
+    {
+      "source": "Secret",
+      "target": "密钥",
+      "note": "敏感信息管理"
+    },
+    {
+      "source": "Replica",
+      "target": "副本",
+      "note": "实例复制"
+    },
+    {
+      "source": "Deployment",
+      "target": "部署",
+      "note": "K8s部署对象"
+    },
+    {
+      "source": "StatefulSet",
+      "target": "有状态集",
+      "note": "K8s有状态应用管理"
+    },
+    {
+      "source": "DaemonSet",
+      "target": "守护进程集",
+      "note": "K8s节点级应用管理"
+    },
+    {
+      "source": "Job",
+      "target": "任务",
+      "note": "K8s一次性任务"
+    },
+    {
+      "source": "CronJob",
+      "target": "定时任务",
+      "note": "K8s周期性任务"
+    }
+  ]
+}
